@@ -1,5 +1,5 @@
 //the time we give the sensor to calibrate (10-60 secs according to the datasheet)
-int calibrationTime = 30;        
+int calibrationTime = 1;        
 
 //the time when the sensor outputs a low impulse
 long unsigned int lowIn;
@@ -12,10 +12,10 @@ boolean lockLow = true;
 boolean takeLowTime;  
 
 int pirPin = 2;    //the digital pin connected to the PIR sensor's output
-int ledPin = 4;
+int ledPin = 5;
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   pinMode(pirPin, INPUT);
   pinMode(ledPin, OUTPUT);
 //  digitalWrite(pirPin, LOW);
